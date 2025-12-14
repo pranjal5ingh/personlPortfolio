@@ -720,7 +720,6 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png');
-    /* FA icons use currentColor — but images can't, so optional: */
     border-radius: 4px;
 }
 
@@ -1102,8 +1101,6 @@ a {
     center/contain no-repeat;
 }
 
-
-
 .achievement-card:hover .achievement-icon {
     transform: rotateY(180deg);
 }
@@ -1325,7 +1322,7 @@ textarea.form-control {
     font-size: 0.9rem;
 }
 
-/* Media Queries */
+/* Media Queries (Original - Desktop/Tablet) */
 @media (max-width: 1200px) {
     .hero-title {
         font-size: 3.5rem;
@@ -1415,6 +1412,32 @@ textarea.form-control {
         display: none;
     }
 
+    /* === Added Active State for Mobile Menu === */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background: var(--darker-color);
+        padding: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
     .mobile-menu-btn {
         display: block;
     }
@@ -1448,17 +1471,50 @@ textarea.form-control {
     }
 }
 
-@media (max-width: 576px) {
+/* =========================================
+   Mobile Responsiveness (iPhone 14 & similar)
+   Overrides previous rules for better mobile experience
+========================================= 
+*/
+
+@media (max-width: 430px) {
+    /* --- Layout & Container Adjustments --- */
+    .container {
+        width: 92%;
+        padding: 0 10px;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+        padding: 7rem 0 4rem;
+        min-height: auto; /* Remove 100vh constraint */
+        text-align: center;
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem; /* Smaller font to fit screen */
+        line-height: 1.2;
+    }
+
+    .hero-greeting {
+        justify-content: center;
+        font-size: 1rem;
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
     }
 
-    .hero-greeting {
-        font-size: 1rem;
+    .hero-description {
+        margin: 0 auto 2rem auto;
     }
 
     .about-heading,
@@ -1466,11 +1522,154 @@ textarea.form-control {
         font-size: 2rem;
     }
 
-    .section-title {
+    /* Fix 3D Visual Overflow */
+    .hero-visual {
+        margin-top: 2rem;
+        transform: scale(0.85); /* Scale down slightly */
+    }
+
+    .hero-visual-inner {
+        width: 280px; /* Force width to fit mobile */
+        height: 350px;
+    }
+
+    /* Hero Buttons */
+    .hero-content .btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    /* --- About Section --- */
+    .about-image-container {
+        /* Reduce the rotation effect slightly for mobile */
+        transform: rotate(0deg); 
+        margin-bottom: 2rem;
+        border-radius: 20px;
+    }
+    
+    .about-image-bg {
+        transform: rotate(4deg) scale(0.95);
+    }
+
+    .about-heading {
         font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-tagline {
+        justify-content: center;
+    }
+
+    /* Force 2 columns for skills on mobile */
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    /* --- Projects Section --- */
+    .projects-container {
+        /* Override the 350px min-width that breaks mobile layout */
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+
+    .project-card {
+        height: auto; /* Allow card to grow with content */
+        min-height: auto;
+        transform: none !important; /* Disable fade-in slide if causing issues */
+        opacity: 1 !important;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    /* --- Experience / Timeline Fixes --- */
+    .timeline::before {
+        left: 20px; /* Move line to the far left */
+    }
+
+    .timeline-icon {
+        left: 20px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
     }
 
     .timeline-content {
-        padding: 1.5rem;
+        /* Maximize space for text */
+        width: calc(100% - 50px); 
+        margin-left: 50px !important;
+        padding: 1.2rem;
+        text-align: left;
+    }
+
+    .timeline-date {
+        /* Move date inside the flow instead of absolute positioning */
+        position: relative;
+        top: 0;
+        left: 0 !important;
+        right: auto !important;
+        margin: 0 0 0.8rem 0;
+        display: inline-block;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* --- Contact Section --- */
+    .contact-container {
+        gap: 2.5rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .contact-text {
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 1.5rem; /* Less padding to give inputs more room */
+    }
+
+    /* --- Footer --- */
+    .footer {
+        text-align: center;
+    }
+
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Specific tweaks for smaller iPhone screens (iPhone 14 / 13 / 12 base models) */
+@media (max-width: 390px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .project-tags {
+        gap: 0.3rem;
+    }
+    
+    .project-tag {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.6rem;
     }
 }
