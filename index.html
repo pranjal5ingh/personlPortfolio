@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranjal Singh- Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-text">P.S.</div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+
+<!-- Background Shapes -->
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
+
+
+<!-- Header -->
+ <header class="header">
+        <div class="container header-container">
+            <div class="logo">P.<span>S.</span></div>
+            <nav class="nav">
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#achievements" class="nav-link">Achievements</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="/adminLogin" class="nav-link">Login</a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">Hi there, I'm</div>
+                <h1 class="hero-title"><span class="gradient-text">Pranjal Singh</span></h1>
+                <h2 class="hero-subtitle">Developer</h2>
+                <p class="hero-description">
+                    Passionate about solving complex problems through code and equally devoted to teaching and mentoring, I bridge the worlds of software engineering and education to inspire innovation and growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="tel:+917007147883" class="social-link">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                    <a href="mailto:pranjalsingh77960@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranjal-singh-b20891246/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/pranjal5ingh" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="hero-visual-frame">
+                        <img src="/images/profile.jpg" alt="Profile" style="width: 90%; height: 90%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="hero-visual-frame"></div>
+                    <div class="hero-visual-frame"></div>
+                </div>
+<!--                <div class="hero-stats stats-1">-->
+<!--                    <div class="hero-stats-icon">-->
+<!--                        <i class="fas fa-code"></i>-->
+<!--                    </div>-->
+<!--                    <div class="hero-stats-text">-->
+<!--                        <div class="hero-stats-label">Developer</div>-->
+<!--                        <div class="hero-stats-value">IBM</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="hero-stats stats-2">-->
+<!--                    <div class="hero-stats-icon">-->
+<!--                        <i class="fa-solid fa-chalkboard-user"></i>-->
+<!--                    </div>-->
+<!--                    <div class="hero-stats-text">-->
+<!--                        <div class="hero-stats-label">Mentor</div>-->
+<!--                        <div class="hero-stats-value">Topmate</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="hero-stats stats-3">-->
+<!--                    <div class="hero-stats-icon">-->
+<!--                        <i class="fa-solid fa-video"></i>-->
+<!--                    </div>-->
+<!--                    <div class="hero-stats-text">-->
+<!--                        <div class="hero-stats-label">Content Creator</div>-->
+<!--                        <div class="hero-stats-value">Youtube/Udemy</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-indicator-line">
+                <div class="scroll-indicator-dot"></div>
+            </div>
+        </div>
+    </section>
+
+<!-- About Section -->
+ <section class="section about" id="about">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    Get to know more about my background, skills, and what drives me
+                </p>
+            </div>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-tagline">My Background</div>
+                    <h3 class="about-heading">Developer by Profession</h3>
+                    <p class="about-text">
+                        I’m Pranjal Singh — a software developer who enjoys solving real-world problems through clean, efficient, and well-structured code. I work primarily with Java, Spring Boot, and MySQL, building backend systems that are stable, scalable, and built for real-world use.
+                    </p>
+                    <p class="about-text">
+                        In addition to backend development, I also build Android applications using Kotlin. Working on mobile projects has strengthened my understanding of clean architecture, smooth UI/UX, and creating experiences that feel natural and intuitive on every device.
+                    </p>
+                    <p class="about-text">
+                        I believe in staying grounded in fundamentals, learning continuously, and building software that actually matters. Whether I’m designing backend logic or developing modern Android apps, my goal is simple — create impactful, reliable solutions that stand the test of time.
+                    </p>
+                    <!-- Keep rest of the content unchanged -->
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <div class="skill-name">Java</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <div class="skill-name">Spring Boot</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-kotlin"></i></div>
+                            <div class="skill-name">Kotlin</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-android"></i></div>
+                            <div class="skill-name">Android</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <div class="skill-name">SQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                            <div class="skill-name">MySQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                            <div class="skill-name">AWS</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div>
+                            <div class="skill-name">Git</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-container">
+                        <div class="about-image-bg"></div>
+                        <img src="/images/hero-section.jpg" alt="About" class="about-image">
+                    </div>
+                    <div class="about-decorations">
+                        <div class="about-decoration"></div>
+                        <div class="about-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">
+                    Explore some of my recent work and the projects I've built with passion and precision.
+                </p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnail6.jpg" alt="udemy">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">Spring Security</span>
+                            <span class="project-tag">Data JPA</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">AWS</span>
+                            <span class="project-tag">Mongodb</span>
+                            <span class="project-tag">Postman</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Build REST APIs with Spring and Spring Boot</h3>
+                        <p class="project-description">
+                            In this course, you will learn how to create production grade REST API that connects to the MySQL database through JPA/Hibernate
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnails1.png" alt="Ambulance Navigation System">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">Spring MVC</span>
+                            <span class="project-tag"> CSS</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">JS</span>
+                            <span class="project-tag">Full Stack</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ClientSphere</h3>
+                        <p class="project-description">
+                            A dynamic Spring Boot-based web application designed for client management — providing user registration, login, and admin features in an elegant, responsive interface.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/pranjal5ingh/ClientSphere-" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnail2.png" alt="Ener Tracker">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Android</span>
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">XML</span>
+                            <span class="project-tag">MySql</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Android Studio</span>
+                            <span class="project-tag">Android App</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Wave Of Food</h3>
+                        <p class="project-description">
+                            🍽️ Wave of Food – Smart Food Tracker with Real-Time Cloud Sync 🌐 Wave of Food is a smart food inventory and reminder app that helps users manage their meals, groceries, and food stock efficiently.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/pranjal5ingh/Wave_of_Food" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnail3.jpg" alt="Freelance retail billing software">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">AWS</span>
+                            <span class="project-tag">IntelliJ IDEA</span>
+                            <span class="project-tag">Full Stack</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Freelance Retail Billing Software</h3>
+                        <p class="project-description">
+                            In this video, we will build a freelance retail product for one of the electronics business that automate their billing system.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnail4.jpg" alt="PitchPro">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">Spring Security</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">IntelliJ IDEA</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Authify by Spring Security</h3>
+                        <p class="project-description">
+                            In this video, learn how we can secure the REST APIs using Spring security and JWT token that connects to the MySQL database.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/images/thumbnail5.jpg" alt="todoapp">
+                        <div class="project-overlay"></div>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">Thymeleaf</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">IntelliJ IDEA</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Spring Boot - Todo List</h3>
+                        <p class="project-description">
+                            In this video, you will learn how to create simple yet powerful todo application with beautiful UI design.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Experience Section -->
+<section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">
+                    My professional journey and educational background
+                </p>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2025 - August 2025</div>
+                        <h3 class="timeline-title">Android Developer</h3>
+                        <h4 class="timeline-subtitle">Edmedtech Healthcare Solutions LLP</h4>
+                        <p class="timeline-description">
+                            Developed healthcare app features with real-time messaging using Firebase Realtime Database. Implemented secure authentication and role-based access control via Firebase Auth.
+                        </p>
+                    </div>
+                </div>
+
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-icon">-->
+<!--                        <i class="fa-solid fa-code"></i>-->
+<!--                    </div>-->
+<!--                    <div class="timeline-content">-->
+<!--                        <div class="timeline-date">June 2016 - Present</div>-->
+<!--                        <h3 class="timeline-title">Developer</h3>-->
+<!--                        <h4 class="timeline-subtitle">IBM | Ex - Cardinal Health | Ex - Cognizant</h4>-->
+<!--                        <p class="timeline-description">-->
+<!--                            Worked on enterprise-level applications across healthcare, retail, and tech domains. Specialized in backend development using Java and Spring Boot, collaborated on full-stack projects, and delivered scalable, high-performance solutions in Agile environments.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-icon">-->
+<!--                        <i class="fa-solid fa-clapperboard"></i>-->
+<!--                    </div>-->
+<!--                    <div class="timeline-content">-->
+<!--                        <div class="timeline-date">August 2017 - Present</div>-->
+<!--                        <h3 class="timeline-title">Content Creator</h3>-->
+<!--                        <h4 class="timeline-subtitle">@engineertalkswithbushan</h4>-->
+<!--                        <p class="timeline-description">-->
+<!--                            Created educational content on software development, Java, Spring Boot, and career guidance through YouTube and other platforms. Built a community of thousands of learners by simplifying complex tech concepts and sharing real-world project tutorials.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-icon">-->
+<!--                        <i class="fa-solid fa-chalkboard-user"></i>-->
+<!--                    </div>-->
+<!--                    <div class="timeline-content">-->
+<!--                        <div class="timeline-date">January 2019 - Present</div>-->
+<!--                        <h3 class="timeline-title">Teacher</h3>-->
+<!--                        <h4 class="timeline-subtitle">Udemy</h4>-->
+<!--                        <p class="timeline-description">-->
+<!--                            Designed and delivered high-quality online courses on Udemy, focusing on Java, Spring Boot, and full-stack development. Helped thousands of students globally enhance their coding skills through practical projects and clear, beginner-friendly instruction.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+
+<!-- Achievements Section -->
+ <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">
+                    Recognitions and milestones I've reached along my journey
+                </p>
+            </div>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="leetcode-icon"></i>
+                    </div>
+                    <a href="https://leetcode.com/u/pranjalsingh18/"><h3 class="achievement-title"> LeetCode</h3></a>
+                    <p class="achievement-description">
+                        Solved 250+ LeetCode problems, building a strong foundation in DSA concepts like arrays, strings, trees, graphs, and dynamic programming, while improving my overall problem-solving and optimization skills.
+                    </p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="achievement-title">3rd Position in CodeQuest at AKGEC, Ghaziabad</h3>
+                    <p class="achievement-description">
+                        Secured 3rd position in CodeQuest at AKGEC, Ghaziabad — a competitive coding contest that tested problem-solving speed and algorithmic skills. This achievement reflects my strong DSA foundation and ability to perform under pressure.
+                    </p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="sih-icon"></i>
+                    </div>
+                    <h3 class="achievement-title">Participated in Smart India Hackathon 2023</h3>
+                    <p class="achievement-description">
+                        Participated in Smart India Hackathon 2023, working with a team to analyze real-world problem statements and build an innovative prototype under strict deadlines. This experience strengthened my teamwork, problem-solving skills, and ability to deliver practical tech solutions.
+                    </p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fa-solid fa-code-merge"></i>
+                    </div>
+                    <h3 class="achievement-title">GitHub Contributions</h3>
+                    <p class="achievement-description">
+                        Actively contributed to open-source projects on GitHub, shared reusable code libraries, and consistently maintained personal repositories featuring full-stack applications, helping developers learn and collaborate globally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Have a project in mind or want to collaborate? Let's talk!
+                </p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's Build Something Amazing Together</h3>
+                    <p class="contact-text">
+                        I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to reach out using any of the methods below.
+                    </p>
+                    <div class="contact-links">
+                        <a href="tel:+917007147883" class="contact-link">
+                            <div class="contact-link-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">Phone</span>
+                                <span class="contact-link-value">+91 7007147883</span>
+                            </div>
+                        </a>
+                        <a href="mailto:pranjalsingh77960@gmail.com" class="contact-link">
+                            <div class="contact-link-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">pranjalsingh77960@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranjal-singh-b20891246/" target="_blank" class="contact-link">
+                            <div class="contact-link-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-link-text">
+                                <span class="contact-link-label">LinkedIn</span>
+                                <span class="contact-link-value">pranjal-singh</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form  id="contactForm" method="post">
+<!--                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">-->
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="How can I help you?" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Pranjal Singh</a>
+                    <p class="footer-text">
+                        Passionate about solving complex problems through code and equally devoted to teaching and mentoring, I bridge the worlds of software engineering and education to inspire innovation and growth.
+                    </p>
+                    <div class="footer-social">
+                        <a href="tel:+917007147883" class="social-link">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <a href="mailto:pranjalsingh77906@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranjal-singh-b20891246/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/pranjal5ingh" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> Home
+                        </a>
+                        <a href="#about" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> About
+                        </a>
+                        <a href="#projects" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> My Work
+                        </a>
+                        <a href="#experience" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> Experience
+                        </a>
+                        <a href="#achievements" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> Achievements
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <div class="footer-links">
+<!--                        <a href="https://www.youtube.com/@engineertalkswithbushan" class="footer-link">-->
+<!--                            <i class="fas fa-chevron-right"></i> Youtube-->
+<!--                        </a>-->
+<!--                        <a href="https://topmate.io/scbushan05/" class="footer-link">-->
+<!--                            <i class="fas fa-chevron-right"></i> Topmate-->
+<!--                        </a>-->
+<!--                        <a href="https://www.udemy.com/user/bushansirgur/" class="footer-link">-->
+<!--                            <i class="fas fa-chevron-right"></i> Udemy-->
+<!--                        </a>-->
+                        <a href="https://www.linkedin.com/in/pranjal-singh-b20891246/" class="footer-link">
+                            <i class="fas fa-chevron-right"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pranjal Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
